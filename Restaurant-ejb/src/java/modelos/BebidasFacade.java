@@ -5,10 +5,10 @@
  */
 package modelos;
 
-import entidades.TbPrato;
+import entidades.TbBebida;
 import java.util.List;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
-import javax.ejb.LocalBean;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -17,30 +17,21 @@ import javax.persistence.PersistenceContext;
  * @author gabriel
  */
 @Stateless
-@LocalBean
-public class PratosFacade extends AbstractFacade<TbPrato>{
+public class BebidasFacade {
+    @EJB
+    private TbBebida bebidas;
     
-    @PersistenceContext(unitName = "Restaurant-ejbPU")
+    @PersistenceContext
     private EntityManager em;
-
-    public PratosFacade() {
-        super(TbPrato.class);
-    }
-    
-    public TbPrato solicitarPrato(){
+    public TbBebida cadastrarBebida(){
         return null;
     }
     
-    public String cadastrarPrato(){
+    public String solicitarBebida(){
         return null;
     }
     
-    public List<TbPrato> listarPratos(){
+    public List<TbBebida> listarBebidas(){
         return null;
-    }
-
-    @Override
-    protected EntityManager getEntityManager() {
-        return em;
     }
 }

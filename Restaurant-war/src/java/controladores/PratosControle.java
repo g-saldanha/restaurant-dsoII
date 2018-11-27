@@ -37,20 +37,5 @@ public class PratosControle implements Serializable{
 
     public void setPratos(TbPrato pratos) {
         this.pratos = pratos;
-    }
-    
-    public String solicitarPrato(){
-        return null;
-    }
-    
-    public String cadastrarPrato(){
-        return null;
-    }
-    
-    public List<TbPrato> listarPratos(){
-        return null;
-    }
-    
-    
-    
+    }  
 }

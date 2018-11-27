@@ -34,17 +34,5 @@ public class BebidasControle implements Serializable{
     public void setBebidas(TbBebida bebidas) {
         this.bebidas = bebidas;
     }
-    
-    public String cadastrarBebida(){
-        return null;
-    }
-    
-    public String solicitarBebida(){
-        return null;
-    }
-    
-    public List<TbBebida> listarBebidas(){
-        return null;
-    }
-    
+        
 }

@@ -27,14 +27,9 @@ public class MesasFacade extends AbstractFacade<TbCaixa>{
      super(TbCaixa.class);
     }
     
-    
-    
     public List<TbCaixa> consultarMesas(){
         return em.createNamedQuery("TbCaixa.queryMesas", TbCaixa.class).getResultList();              
     }
-
-    // Add business logic below. (Right-click in editor and choose
-    // "Insert Code > Add Business Method")
 
     @Override
     protected EntityManager getEntityManager() {
