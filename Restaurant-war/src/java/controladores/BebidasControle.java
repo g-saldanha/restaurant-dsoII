@@ -8,10 +8,13 @@ package controladores;
 import entidades.TbBebida;
 import java.io.Serializable;
 import java.util.List;
+import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import modelos.BebidasFacade;
+import recursos.Mensagens;
 
 /**
  *
@@ -21,18 +24,34 @@ import javax.persistence.PersistenceContext;
 @SessionScoped
 public class BebidasControle implements Serializable{
     
+    @EJB
+    private BebidasFacade bebidasFacade;
     private TbBebida bebidas = new TbBebida();
+    private LoginControle loginControle = new LoginControle();
     
-
+    
     public BebidasControle() {
     }
 
-    public TbBebida getBebidas() {
+    public TbBebida getBebida() {
         return bebidas;
     }
 
     public void setBebidas(TbBebida bebidas) {
         this.bebidas = bebidas;
+    }
+    
+    public List<TbBebida> getListaBebidas(){
+        return this.bebidasFacade.listarBebidas();
+    }
+    
+    public String cadastrarBebida(TbBebida bebida){
+        boolean cadastrou = bebidasFacade.cadastrarBebida(bebida, this.loginControle.getUserBO());
+        if (true) {
+            return bebida.getDsBebida() + Mensagens.CADASTRADA_COM_SUCESSO;
+        } else {
+            return Mensagens.ERRO;
+        }
     }
         
 }

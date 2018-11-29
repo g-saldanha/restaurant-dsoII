@@ -5,6 +5,8 @@
         <group>
             <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-war/src/java/controladores/LoginControle.java</file>
             <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-war/src/java/controladores/PassagemControle.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-war/src/java/recursos/Mensagens.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-war/src/java/controladores/BebidasControle.java</file>
             <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-war/src/java/controladores/UsuariosControle.java</file>
         </group>
     </open-files>

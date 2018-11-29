@@ -4,6 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-ejb/src/java/modelos/UsuarioFacade.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-ejb/src/java/modelos/HistoricoPedidosFacade.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-ejb/src/java/modelos/BebidasFacade.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-ejb/src/java/modelos/PratosFacade.java</file>
+            <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-ejb/src/java/entidades/TbBebida.java</file>
             <file>file:/home/gabriel/NetBeansProjects/Restaurant/Restaurant-ejb/src/java/modelos/PassagensFacade.java</file>
         </group>
     </open-files>

@@ -5,11 +5,10 @@
  */
 package modelos;
 
-import entidades.TbBebida;
-import entidades.TbUsuario;
+import entidades.TbFechamentos;
 import java.util.List;
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.ejb.LocalBean;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -18,22 +17,28 @@ import javax.persistence.PersistenceContext;
  * @author gabriel
  */
 @Stateless
-public class BebidasFacade {
-    @EJB
-    private TbBebida bebidas;
+@LocalBean
+public class FechamentoCaixaFacade extends AbstractFacade<TbFechamentos>{
     
     @PersistenceContext
     private EntityManager em;
-    
-    public String solicitarBebida(){
-        return null;
-    }
-    
-    public List<TbBebida> listarBebidas(){
-        return null;
+
+    public FechamentoCaixaFacade() {
+        super(TbFechamentos.class);
     }
 
-    public boolean cadastrarBebida(TbBebida bebida, TbUsuario userBO) {
+    @Override
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+    
+    public boolean cadastrarFechamento(){
         return false;
     }
+    
+    public List<TbFechamentos> listarFechamentos(){
+        return null;
+    }
+    
+    
 }
