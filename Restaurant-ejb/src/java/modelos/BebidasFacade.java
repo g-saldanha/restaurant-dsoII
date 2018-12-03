@@ -21,14 +21,14 @@ import javax.persistence.PersistenceContext;
 public class BebidasFacade {
     @EJB
     private TbBebida bebidas;
-    
+
     @PersistenceContext
     private EntityManager em;
-    
+
     public String solicitarBebida(){
         return null;
     }
-    
+
     public List<TbBebida> listarBebidas(){
         return null;
     }

@@ -25,15 +25,15 @@ import org.apache.log4j.Logger;
 @Named(value = "loginControle")
 @SessionScoped
 public class LoginControle implements Serializable {
-    
+
     private static Logger logger = Logger.getLogger(LoginControle.class);
     @EJB
     private UsuarioFacade usuarioFacade;
     private int login;
     private String senha;
     private String codigo;
-    
-       
+
+
     @ManagedProperty(value = "#{userBO}")
     private TbUsuario userBO;
 
@@ -44,10 +44,10 @@ public class LoginControle implements Serializable {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
- 
+
     public LoginControle() {
     }
-    
+
     public int getLogin() {
         return login;
     }
@@ -63,8 +63,8 @@ public class LoginControle implements Serializable {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-    
+
+
     public String logar(){
         try{
             TbUsuario usuario = usuarioFacade.verificaUsuario(codigo, login, senha);
@@ -78,8 +78,8 @@ public class LoginControle implements Serializable {
                     SessionContext.getInstance().setUsuarioLogado(usuario);
                     return "garcomHome.xhtml?faces-redirect=true";
                 }
-                
-            }    
+
+            }
         }catch(Exception e){
             RequestContext.getCurrentInstance().update("growl");
             FacesContext context = FacesContext.getCurrentInstance();
@@ -87,31 +87,31 @@ public class LoginControle implements Serializable {
         }finally{
             zerarCampos();
         }
-        
+
        return "";
-    }        
+    }
 
     public String fazerLogout(){
         SessionContext.getInstance().encerrarSessao();
         return "index.xhtml";
-    }        
-            
-    
-    
+    }
+
+
+
     public TbUsuario getUserBO() {
         TbUsuario usuario = (TbUsuario) SessionContext.getInstance().getUsuarioLogado();
         return usuario;
     }
-    
+
     public void setUserBO(TbUsuario usuario){
         this.userBO = usuario;
     }
-    
+
     public void zerarCampos(){
         setLogin(0);
         setSenha(null);
     }
-    
-    
-}       
-    
+
+
+}
+

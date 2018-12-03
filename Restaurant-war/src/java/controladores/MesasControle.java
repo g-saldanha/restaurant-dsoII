@@ -25,7 +25,7 @@ public class MesasControle implements Serializable{
     @EJB
     private MesasFacade mesas;
     private TbCaixa caixa = new TbCaixa();
-    
+
     @PersistenceContext
     private EntityManager em;
 
@@ -39,7 +39,11 @@ public class MesasControle implements Serializable{
     public void setCaixa(TbCaixa caixa) {
         this.caixa = caixa;
     }
-    
-  
-    
+
+    public List<TbCaixa> listarMesas(){
+        return null;
+    }
+
+
+
 }

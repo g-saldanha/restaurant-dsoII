@@ -23,13 +23,13 @@ import recursos.Mensagens;
 @Named("bebidasControle")
 @SessionScoped
 public class BebidasControle implements Serializable{
-    
+
     @EJB
     private BebidasFacade bebidasFacade;
     private TbBebida bebidas = new TbBebida();
     private LoginControle loginControle = new LoginControle();
-    
-    
+
+
     public BebidasControle() {
     }
 
@@ -40,11 +40,11 @@ public class BebidasControle implements Serializable{
     public void setBebidas(TbBebida bebidas) {
         this.bebidas = bebidas;
     }
-    
+
     public List<TbBebida> getListaBebidas(){
         return this.bebidasFacade.listarBebidas();
     }
-    
+
     public String cadastrarBebida(TbBebida bebida){
         boolean cadastrou = bebidasFacade.cadastrarBebida(bebida, this.loginControle.getUserBO());
         if (true) {
@@ -53,5 +53,5 @@ public class BebidasControle implements Serializable{
             return Mensagens.ERRO;
         }
     }
-        
+
 }
